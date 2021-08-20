@@ -12,6 +12,7 @@
 conda create -n vlt5 python=3.7
 
 # Install python dependencies
+pip install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=11. -c pytorch
 pip install -r requirements.txt
 
 # Download T5/BART backbone checkpoint
@@ -19,6 +20,11 @@ python download_backbones.py
 
 # For MSCOCO captioning evaluation
 python -c "import language_evaluation; language_evaluation.download('coco')"
+
+# Install Apex
+git clone https://github.com/NVIDIA/apex
+cd apex
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
 ```
 
 ## Code structure
