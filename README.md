@@ -12,7 +12,7 @@
 conda create -n vlt5 python=3.7
 
 # Install python dependencies
-pip install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=11. -c pytorch
+pip install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt
 
 # Download T5/BART backbone checkpoint
