@@ -8,9 +8,9 @@ python -m torch.distributed.launch \
     --nproc_per_node=$1 \
     src/pretrain.py \
         --distributed --multiGPU --fp16 \
-        --train mscoco_resplit_train,vgnococo \
+        --train mscoco_resplit_train \
         --valid mscoco_resplit_val \
-        --batch_size 80 \
+        --batch_size 8 \
         --optim adamw \
         --warmup_ratio 0.05 \
         --lr 1e-4 \
